@@ -96,7 +96,8 @@ public class GerenciaBanco {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("Emoji chorando:\r\uD83D\uDE2D \uD83D\uDE2D \uD83D\uDE2D \uD83D\uDE2D \uD83D\uDE2D \uD83D\uDE2D");
+        System.out.println(
+                "Emoji chorando:\r\uD83D\uDE2D \uD83D\uDE2D \uD83D\uDE2D \uD83D\uDE2D \uD83D\uDE2D \uD83D\uDE2D");
     }
 
     // Método para ler a opção escolhida pelo usuário
@@ -139,8 +140,8 @@ public class GerenciaBanco {
 
     // Método para exibir o saldo da conta
     private static void exibirSaldo(OperacoesBancarias operacoes) {
-        DecimalFormat df = new DecimalFormat("#0.00"); // Formato para duas casas decimais
-        System.out.println("Seu saldo é: R$" + df.format(operacoes.consultarSaldo()));
+        DecimalFormat df = new DecimalFormat("R$ #,##0.00"); // Formato para duas casas decimais
+        System.out.println("Seu saldo é:" + df.format(operacoes.consultarSaldo()));
         pausa();
     }
 
